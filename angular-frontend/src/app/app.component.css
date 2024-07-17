@@ -19,6 +19,12 @@
     background-color: #0461e4;
     flex-grow: 1;
 }
-h1{
-    margin: 0;
+.app-container h1{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-display: swap;
+    font-size: 2rem;
+    margin: 30px 30px;
+    font-weight:  650;
+    color: white;
 }
