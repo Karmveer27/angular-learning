@@ -9,5 +9,10 @@ import { LinkComponent } from '../link/link.component';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
+  simproText: string = "Simpro";
+  simproColor: string = "#f0d625";
+  simproLink: string = "https://www.simprogroup.com/";
 
+  contactText: string = "Contact Us";
+  contactLink: string = "https://www.simprogroup.com/contact-us";
 }

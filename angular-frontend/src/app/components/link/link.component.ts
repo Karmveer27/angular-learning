@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './link.component.css'
 })
 export class LinkComponent {
-
+  @Input() text: string = 'Default Text';
+  @Input() color: string = 'white';
+  @Input() link: string = '#';
 }
