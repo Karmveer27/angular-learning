@@ -18,7 +18,8 @@ export class ReviewsComponent {
 
   }
   ngOnInit():void{
-    this.reviews = this.reviewService.getReviews();
+    //this.reviews = this.reviewService.getReviews();
+    this.reviewService.getReviews().subscribe((reviews) => (this.reviews = reviews))
   }
 
 }
