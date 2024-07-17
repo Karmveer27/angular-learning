@@ -5,19 +5,18 @@
     min-height: 100vh;
     overflow-x: hidden;
 }
-body{
-    margin: 0px;
-}
+
 
 .nav-container{
-    background-color: rgb(71, 68, 68);
+  
     padding: 0px;
     margin: 0px;
     min-width: 100%;
-    min-height: 50px;
+    min-height: 60px;
+    max-height: 60px;
 }
 .body-container{
-    background-color: #0138ad;
+    background-color: #0461e4;
     flex-grow: 1;
 }
 h1{

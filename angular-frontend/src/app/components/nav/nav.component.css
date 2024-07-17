@@ -1,0 +1,16 @@
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    min-width: 100vw;
+    background-color:#0461e4;
+}
+.title{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight:  650;
+    font-display: swap;
+    color: #f0d625;
+    font-size: 2rem;
+    margin: 5px 30px;
+}
