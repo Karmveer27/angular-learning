@@ -1,0 +1,25 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    margin: 0px;
+}
+
+.nav-container{
+    background-color: rgb(71, 68, 68);
+    padding: 0px;
+    margin: 0px;
+    min-width: 100%;
+    min-height: 50px;
+}
+.body-container{
+    background-color: #0138ad;
+    flex-grow: 1;
+}
+h1{
+    margin: 0;
+}
