@@ -10,7 +10,7 @@ import { LinkComponent } from '../link/link.component';
 })
 export class NavComponent {
   simproText: string = "Simpro";
-  simproColor: string = "#f0d625";
+  simproColor: string = "white";
   simproLink: string = "https://www.simprogroup.com/";
 
   contactText: string = "Contact Us";
