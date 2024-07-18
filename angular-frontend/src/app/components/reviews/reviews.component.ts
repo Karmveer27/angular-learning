@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Review } from '../../../data/Reviews';
+import { REVIEWS } from '../../../data/mock-reviews';
 import { ReviewComponent } from '../review/review.component';
 import { CommonModule } from '@angular/common';
 import { ReviewService } from '../../services/review.service';
@@ -12,7 +13,7 @@ import { ReviewService } from '../../services/review.service';
   styleUrl: './reviews.component.css'
 })
 export class ReviewsComponent {
-  reviews: Review[] = [];
+  reviews: Review[] = REVIEWS;
 
   constructor(private reviewService: ReviewService){
 
