@@ -1,0 +1,15 @@
+.header-container{
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* THis makes header containter the reference/parent for absolute child positionibg  */
+    
+}
+.header-container img{
+    width: 100px;
+    position: absolute;
+    left: 2rem;
+}
+

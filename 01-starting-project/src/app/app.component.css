@@ -1,0 +1,16 @@
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  /* background-color: red; */
+}
+app-header{
+  width: 100%;
+}
+.body{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
