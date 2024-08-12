@@ -1,27 +1,28 @@
 import { Component,signal,computed } from '@angular/core';
 import { UserComponent } from '../user/user.component';
+import { TasksComponent } from '../tasks/tasks.component';
 import { DUMMY_USERS } from '../../../SAMPLE-DATA';
+import TUser from '../../../TUser';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [UserComponent],
+  imports: [UserComponent,TasksComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
   users = DUMMY_USERS;
-  index = signal(0);
-  //user = this.users[this.index()];
-  user = computed(() => {return this.users[this.index()]})
-  imagePath = computed(() =>  "assets/users/" + this.user().avatar)
+  user?: TUser;
+
   
+  
+ 
 
   
 
-  onUserClick =() =>{
-    console.log("in here")
-    this.index.set(this.index() + 1)
+  onUserClick =(id: string) =>{
+    this.user = this.users.find((u) => u.id === id);
   }
 
 }

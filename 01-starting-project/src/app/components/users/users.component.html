@@ -1,5 +1,19 @@
 <div class="users-container">
-    <div class="user" >
-        <app-user [imagePath]="imagePath()" [name]="user().name"/>
+    <div class="users">
+        @for(u of users; track u.id){
+            <app-user [user]="u" (select)="onUserClick($event)"></app-user>  
+        }
+
+        
     </div>
+    @if(user){
+        <div class="tasks">
+            <app-tasks [user]="user" />
+        </div>
+    }@else {
+    <h1>Select A Person</h1>
+    }
+    
+    
 </div>
+   

@@ -6,11 +6,13 @@
   min-height: 100vh;
   /* background-color: red; */
 }
-app-header{
+app-header,app-users{
   width: 100%;
 }
+
 .body{
   display: flex;
   width: 100%;
   justify-content: space-between;
+  width: 100vw;
 }

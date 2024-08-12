@@ -1,0 +1,12 @@
+.users-container{
+    margin: 30px 10px;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    
+}
+.user img{
+    width: 60px;
+}
