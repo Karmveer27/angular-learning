@@ -1,4 +1,4 @@
-import { Component,input, } from '@angular/core';
+import { Component,input,output } from '@angular/core';
 import TReview from '../../../TReview';
 import TUser from "../../../TUser";
 @Component({
@@ -11,8 +11,10 @@ import TUser from "../../../TUser";
 export class TasksComponent {
   user = input.required<TUser>();
   reviews = input.required<TReview[]>();
-  //deleteTask = out
-  onClickTask(){
-
+  deleteTask = output<{review: TReview}>();
+  onClickTask(review: TReview){
+    this.deleteTask.emit({review: review})
+    console.log("getting here")
   }
+  
 }

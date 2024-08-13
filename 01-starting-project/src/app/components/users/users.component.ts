@@ -15,16 +15,26 @@ import TReview from '../../../TReview';
 })
 export class UsersComponent {
   users = DUMMY_USERS;
-  user?: TUser;
-  reviews?: TReview[];
-  AllReviews = ReviewsData;
+ 
+  // reviews?: TReview[];
+  // AllReviews = ReviewsData;
+    AllReviews = signal(ReviewsData);
+    currentId = signal<string | null>(null);
+    reviews = computed(() => (this.AllReviews().filter((review) => (review.id === this.currentId()))))
+    user = computed<TUser | undefined>(() => this.users.find(u => u.id === this.currentId()));
 
-  
-
-  
   onUserClick =(id: string) =>{
-    this.user = this.users.find((u) => u.id === id);
-    this.reviews = this.AllReviews.filter((review) => (review.id === id))
+    this.currentId.set(id);
+    console.log(this.currentId())
+    console.log(this.reviews())
+  }
+  handleDeleteTask(deleteObject: {review: TReview}){
+    console.log("Getting in handle delete task")
+    this.AllReviews.set(
+      this.AllReviews().filter((r) => (r.title !== deleteObject.review.title))
+    );
+   
+    
   }
 
 }
