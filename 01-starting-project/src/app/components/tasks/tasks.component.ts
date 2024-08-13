@@ -1,4 +1,5 @@
-import { Component,input } from '@angular/core';
+import { Component,input, } from '@angular/core';
+import TReview from '../../../TReview';
 import TUser from "../../../TUser";
 @Component({
   selector: 'app-tasks',
@@ -9,5 +10,9 @@ import TUser from "../../../TUser";
 })
 export class TasksComponent {
   user = input.required<TUser>();
-  
+  reviews = input.required<TReview[]>();
+  //deleteTask = out
+  onClickTask(){
+
+  }
 }

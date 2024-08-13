@@ -10,3 +10,8 @@
 .user img{
     width: 60px;
 }
+
+.user.active{
+    background-color: yellow;
+    color: aqua;
+}

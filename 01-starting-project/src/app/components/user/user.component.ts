@@ -11,13 +11,13 @@ import TUser from '../../../TUser';
 export class UserComponent {
   user = input.required<TUser>();
   imagePath = computed(() =>  "assets/users/" + this.user().avatar)
- 
+  ifSelected = input.required<boolean>();
+
   @Output() select = new EventEmitter();
   // @Input({required: true}) name! : string; 
   // @Input({required: true}) imagePath! : string;
   // @Input({required: true}) id! : string;
   onUserClick(){
     this.select.emit(this.user().id)
-  
   }
 }

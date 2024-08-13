@@ -1,5 +1,5 @@
 <!-- UserComponent Template -->
-<div class="user" (click)="onUserClick()">
+<div class="user" [class.active]="ifSelected()" (click)="onUserClick()">
     <img [src]="imagePath()"/>
     <h4>{{user().name}}</h4>
 </div>

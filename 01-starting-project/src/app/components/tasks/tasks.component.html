@@ -1,1 +1,9 @@
 <p>Name: {{user().name}}</p>
+@if(reviews()){
+    @for(review of reviews(); track review.title){
+        <div onclick="onClickTask">
+            <h2>{{review.title}}</h2>
+        </div>
+    }
+}
+
