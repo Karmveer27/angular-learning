@@ -9,7 +9,7 @@ import TUser from '../../../TUser';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  user = input.required<TUser>();
+  user   = input.required<TUser>();
   imagePath = computed(() =>  "assets/users/" + this.user().avatar)
   ifSelected = input.required<boolean>();
 

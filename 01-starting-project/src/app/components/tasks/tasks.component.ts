@@ -1,5 +1,5 @@
 import { Component,input,output } from '@angular/core';
-import TReview from '../../../TReview';
+import {TReview} from '../../../TReview';
 import TUser from "../../../TUser";
 @Component({
   selector: 'app-tasks',

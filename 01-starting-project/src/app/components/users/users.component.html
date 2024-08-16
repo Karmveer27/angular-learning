@@ -1,19 +1,24 @@
 <div class="users-container">
     <div class="users">
+        
         @for(u of users; track u.id){
             <app-user [user]="u" [ifSelected]="u === user()" (select)="onUserClick($event)"></app-user>  
         }
-
-        
     </div>
     @if(user() && reviews()){
         <div class="tasks">
+            <button (click)="onAddReview()">
+                <h2>Add Review</h2>
+            </button>
+            
             <app-tasks [user]="user()!" [reviews]="reviews()" (deleteTask)="handleDeleteTask($event)" />
         </div>
     }@else {
      <h1>Select A Person</h1>
     }
     
-    
+    @if(addReviewActive()){
+        <app-review-form (cancelAddReveiw)="onCancelAddReview()"/>
+    }
 </div>
    
