@@ -23,7 +23,7 @@ export class UsersComponent {
     currentId = signal<string | null>(null);
     reviews = computed(() => (this.AllReviews().filter((review) => (review.id === this.currentId()))))
     user = computed<TUser | undefined>(() => this.users.find(u => u.id === this.currentId()));
-    addReviewActive = signal<boolean>(true);
+    addReviewActive = signal<boolean>(false);
     
   onUserClick =(id: string) =>{
     this.currentId.set(id);
@@ -43,6 +43,18 @@ export class UsersComponent {
   }
   onCancelAddReview(){
     //console.log("going to cancel now")
+    this.addReviewActive.set(false);
+  }
+
+  onSubmitReview(reviewData: TReviewDTO){
+    const newReview = {
+      id: this.user()!.id,
+      ...reviewData
+    };
+    this.AllReviews.set(
+      [...this.AllReviews(),
+        newReview]
+    )
     this.addReviewActive.set(false);
   }
   

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, output } from '@angular/core';
+import { Component, EventEmitter, Output, output,signal } from '@angular/core';
 import {FormsModule} from '@angular/forms'  
 import { TReviewDTO } from "../../../TReview"
 
@@ -12,6 +12,10 @@ import { TReviewDTO } from "../../../TReview"
 export class ReviewFormComponent {
   cancelAddReveiw = output<void>();
   submitAddReview = output<TReviewDTO>();
+  title = signal<string>("");
+  review = signal<string>("");
+  date = signal<string>("");
+
   //@Output() cancelAddReview? = new EventEmitter();
   
   onCancel(){
@@ -19,7 +23,10 @@ export class ReviewFormComponent {
     this.cancelAddReveiw.emit();
   }
   onSubmit( ){
-   console.log("submitting");
-    
+    this.submitAddReview.emit({
+      title: this.title(),
+      review: this.review(),
+      date: this.date()
+    })
   }
 }

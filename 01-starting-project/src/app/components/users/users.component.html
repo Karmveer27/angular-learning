@@ -18,7 +18,7 @@
     }
     
     @if(addReviewActive()){
-        <app-review-form (cancelAddReveiw)="onCancelAddReview()"/>
+        <app-review-form (cancelAddReveiw)="onCancelAddReview()"  (submitAddReview)="onSubmitReview($event)"/>
     }
 </div>
    
